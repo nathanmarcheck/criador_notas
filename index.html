@@ -1,16 +1,38 @@
 <!DOCTYPE html>
-<html lang="en,pt-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste git hub desktop</title>
+    <title>Notas</title>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Git hub Desktop</h1>
-    <p>O Git Hub desktop é uma aplicaçao q realiza a ligaçao entre o VSC, Git e GitHub. Desta forma os comandos do git são feitos apenas com cliques sem precisar usar comandos. Alem disso, o git hub desktop realiza a sincronizaçao do repositorio local com o remoto.</p>
-    <h2>Commit</h2>
-    <p>Serve para confirma alteraçoes na versao.</p>
-    <h2>puch</h2>
-    <p>Atualiza o repositorio remoto apartir das modificaçoes q foram relaizadas no repositorio local</p>
+    <div class="caixa-nota">
+        <form>
+            <label for="nota">Digite sua nota:</label>
+            <input type="text" id="nota" name="nota">
+            <input type="button" value="Adicionar Nota" onclick="adicionarNota()">
+            <br>
+            <input type="checkbox" name="urgente" id="urgente">
+            <label for="urgente">Enviar como urgente.</label>
+        </form>
+    </div>
+
+    
+        <input type="button" value="Remover tudo" onclick="removerTodasNotas()">
+    
+    <div class="notas">
+    <div class="notas_urgentes">
+        <h3>Notas Urgentes</h3>
+        <ul class="lista-urgentes"></ul>
+        <input type="button" value="Remover" onclick="removerNotasUrgentes()">
+    </div>
+    <div class="notas_normais">
+        <h3>Notas Normais</h3>
+        <ul class="lista-normais"></ul>
+        <input type="button" value="Remover" onclick="removerNotas()">
+    </div>
+</div>
 </body>
 </html>
