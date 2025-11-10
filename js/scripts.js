@@ -36,7 +36,7 @@ function adicionarNota() {
         const notasUrgentes = document.querySelector('.lista-urgentes');
         const pUrgente = document.createElement('li');
         pUrgente.textContent = mensagem;
-        pUrgente.id = 'urgente';
+        pUrgente.id = 'urgentee';
         pUrgente.className = "remover";
         if (cor) {
             pUrgente.style.color = cor;
@@ -70,7 +70,7 @@ function removerTodasNotas() {
     contadorNotas = 0;
 }
 function removerNotasUrgentes() {
-    const notasUrgentes = document.getElementById('urgente');
+    const notasUrgentes = document.getElementById('urgentee');
     if (notasUrgentes) {
         notasUrgentes.remove();
     }

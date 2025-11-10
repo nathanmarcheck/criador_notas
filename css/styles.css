@@ -78,6 +78,9 @@ body{
     color: #000;
     margin-right: 12px;
 }
+.apagar li:last-child{
+    background-color: red;
+}
 
 /* botão remover dentro do li */
 .remover-li{
