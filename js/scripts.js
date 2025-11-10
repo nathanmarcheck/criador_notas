@@ -23,7 +23,7 @@ function adicionarNota() {
     if (contadorNotas === 1) {
         cor = 'blue';
     } else if (contadorNotas === 2) {
-        cor = 'yellow';
+        cor = '#4a9207';
     } else if (contadorNotas === 3) {
         cor = 'purple';
     }
@@ -73,14 +73,12 @@ function removerNotasUrgentes() {
     const notasUrgentes = document.getElementById('urgente');
     if (notasUrgentes) {
         notasUrgentes.remove();
-        notasUrgentes.innerHTML = '<h3>Notas Urgentes</h3>';
     }
 }
 function removerNotas() {
     const notasNormais = document.getElementById('normal');
     if (notasNormais) {
         notasNormais.remove();
-        notasNormais.innerHTML = '<h3>Notas Normais</h3>';
     }
 }
 
