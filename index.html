@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div class="caixa-nota">
         <form>
@@ -19,20 +21,21 @@
         </form>
     </div>
 
-    
-        <input type="button" value="Remover tudo" onclick="removerTodasNotas()">
-    
+
+    <input type="button" value="Remover tudo" onclick="removerTodasNotas()">
+
     <div class="notas">
-    <div class="notas_urgentes">
-        <h3>Notas Urgentes</h3>
-        <ul class="lista-urgentes"></ul>
-        <input type="button" value="Remover" onclick="removerNotasUrgentes()">
+        <div class="notas_urgentes">
+            <h3>Notas Urgentes</h3>
+            <ul class="lista-urgentes"></ul>
+            <input type="button" value="Remover" onclick="removerNotasUrgentes()">
+        </div>
+        <div class="notas_normais">
+            <h3>Notas Normais</h3>
+            <ul class="lista-normais"></ul>
+            <input type="button" value="Remover" onclick="removerNotas()">
+        </div>
     </div>
-    <div class="notas_normais">
-        <h3>Notas Normais</h3>
-        <ul class="lista-normais"></ul>
-        <input type="button" value="Remover" onclick="removerNotas()">
-    </div>
-</div>
 </body>
+
 </html>
