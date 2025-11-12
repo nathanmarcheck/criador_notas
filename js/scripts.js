@@ -75,14 +75,12 @@ function removerNotasUrgentes() {
     const notasUrgentes = document.querySelector('.lista-urgentes').lastChild;
     if (notasUrgentes) {
         notasUrgentes.remove();
-        notasUrgentes.innerHTML = '<h3>Notas Urgentes</h3>';
     }
 }
 function removerNotas() {
     const notasNormais = document.querySelector('.lista-normais').lastChild;
     if (notasNormais) {
         notasNormais.remove();
-        notasNormais.innerHTML = '<h3>Notas Normais</h3>';
     }
 }
 
