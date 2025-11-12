@@ -1,24 +1,30 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     padding: 20px;
 }
-.caixa-nota{
+
+.caixa-nota {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.caixa-nota p{ color: #555; line-height: 1.6; }
 
-.notas{
+.caixa-nota p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.notas {
     display: flex;
     gap: 20px;
     margin-top: 20px;
@@ -27,7 +33,9 @@ body{
     width: 100%;
     justify-content: space-between;
 }
-.notas_urgentes, .notas_normais{
+
+.notas_urgentes,
+.notas_normais {
     flex: 1 1 48%;
     box-sizing: border-box;
     padding: 12px;
@@ -35,11 +43,19 @@ body{
     min-width: 220px;
     max-width: 48%;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
 }
-.notas_urgentes{ border: 2px solid #ff0101; }
-.notas_normais{ border: 2px solid #bbce11; }
-.notas_urgentes h3, .notas_normais h3{
+
+.notas_urgentes {
+    border: 2px solid #ff0101;
+}
+
+.notas_normais {
+    border: 2px solid #bbce11;
+}
+
+.notas_urgentes h3,
+.notas_normais h3 {
     text-align: center;
     margin-bottom: 12px;
     color: #333;
@@ -47,7 +63,7 @@ body{
 
 /* manter pontinhos nas <ul> */
 .notas_urgentes .lista-urgentes,
-.notas_normais .lista-normais{
+.notas_normais .lista-normais {
     list-style-type: disc;
     list-style-position: outside;
     padding-left: 24px;
@@ -56,30 +72,31 @@ body{
 
 /* cada li mantém marcador e tem conteúdo alinhado por .li-content */
 .notas_urgentes li,
-.notas_normais li{
+.notas_normais li {
     background: #fff;
     padding: 8px 12px;
     border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
     margin-bottom: 8px;
-    display: list-item; /* preserva o marcador (bullet) */
+    display: list-item;
+    /* preserva o marcador (bullet) */
 }
 
 /* layout interno do li: texto à esquerda, botão à direita */
-.li-content{
+.li-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 /* estilo do texto dentro do li */
-.li-text{
+.li-text {
     color: #000;
     margin-right: 12px;
 }
 
 /* botão remover dentro do li */
-.remover-li{
+.remover-li {
     background: #e74c3c;
     color: #fff;
     border: none;
@@ -88,10 +105,13 @@ body{
     cursor: pointer;
     font-size: 13px;
 }
-.remover-li:hover{ background: #c0392b; }
+
+.remover-li:hover {
+    background: #c0392b;
+}
 
 /* botões "Remover" (externos) */
-input[type="button"][value^="Remover"]{
+input[type="button"][value^="Remover"] {
     width: 140px;
     height: 38px;
     display: inline-flex;
@@ -105,18 +125,22 @@ input[type="button"][value^="Remover"]{
     border-radius: 6px;
     font-size: 14px;
     cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
     transition: background-color 0.15s ease, transform 0.08s ease;
     margin: 8px 0;
     box-sizing: border-box;
 }
-input[type="button"][value^="Remover"]:hover{
+
+input[type="button"][value^="Remover"]:hover {
     background-color: #c0392b;
     transform: translateY(-1px);
 }
-input[type="button"][value^="Remover"]:active{ transform: translateY(0); }
 
-.notas input[type="button"][value^="Remover"]{
+input[type="button"][value^="Remover"]:active {
+    transform: translateY(0);
+}
+
+.notas input[type="button"][value^="Remover"] {
     width: 110px;
     height: 34px;
     font-size: 13px;

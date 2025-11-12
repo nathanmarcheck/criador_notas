@@ -23,7 +23,7 @@ function adicionarNota() {
     if (contadorNotas === 1) {
         cor = 'blue';
     } else if (contadorNotas === 2) {
-        cor = 'yellow';
+        cor = '#bbce11';
     } else if (contadorNotas === 3) {
         cor = 'purple';
     }
@@ -36,7 +36,6 @@ function adicionarNota() {
         const notasUrgentes = document.querySelector('.lista-urgentes');
         const pUrgente = document.createElement('li');
         pUrgente.textContent = mensagem;
-        pUrgente.id = 'urgente';
         pUrgente.className = "remover";
         if (cor) {
             pUrgente.style.color = cor;
@@ -48,7 +47,6 @@ function adicionarNota() {
         const notasNormais = document.querySelector('.lista-normais');
         const pNormal = document.createElement('li');
         pNormal.textContent = mensagem;
-        pNormal.id = 'normal';
         pNormal.className = "remover";
         if (cor) {
             pNormal.style.color = cor;
@@ -60,24 +58,28 @@ function adicionarNota() {
     checkbox.checked = false;
 }
 function removerTodasNotas() {
-    const tudo = document.getElementsByClassName('remover');
-    if (tudo) {
-        while (tudo.length > 0) {
-            tudo[0].remove();
+    const reposta = confirm('Tem certeza que deseja remover todas as notas?');
+    if (reposta) { //verifica se o usuário confirmou
+        const tudo = document.getElementsByClassName('remover');
+        if (tudo) {
+            while (tudo.length > 0) {
+                tudo[0].remove();
+            }
         }
     }
+
     // Reseta o contador quando todas as notas são removidas
     contadorNotas = 0;
 }
 function removerNotasUrgentes() {
-    const notasUrgentes = document.getElementById('urgente');
+    const notasUrgentes = document.querySelector('.lista-urgentes').lastChild;
     if (notasUrgentes) {
         notasUrgentes.remove();
         notasUrgentes.innerHTML = '<h3>Notas Urgentes</h3>';
     }
 }
 function removerNotas() {
-    const notasNormais = document.getElementById('normal');
+    const notasNormais = document.querySelector('.lista-normais').lastChild;
     if (notasNormais) {
         notasNormais.remove();
         notasNormais.innerHTML = '<h3>Notas Normais</h3>';
