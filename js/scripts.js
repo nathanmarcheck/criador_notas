@@ -72,7 +72,7 @@ function removerTodasNotas() {
     contadorNotas = 0;
 }
 function removerNotasUrgentes() {
-    const notasUrgentes = document.querySelector('.lista-urgentes').lastChild;
+    const notasUrgentes = document.querySelector('.lista-urgentes').lastChild; //lastChild- seleciona o ultimo elemento da lista.
     if (notasUrgentes) {
         notasUrgentes.remove();
     }
